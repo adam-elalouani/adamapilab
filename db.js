@@ -26,10 +26,12 @@ const databaseGpus = [
     { id: 1, model: 'Nvidia GeForce RTX 3080', vram: '10 GB DDR6X', price: 300 },
     { id: 2, model: 'Nvidia GeForce RTX 4070', vram: '10 GB DDR6X', price: 600 }
 ];
+
 module.exports = {
 databaseCpus,
 databaseGpus,
 };
+
 //-----------------------------
 // #region Setup
 //-----------------------------
