@@ -2,17 +2,27 @@
 
 const db = require("./db");
 
-const authorFilter = (req, res) => {
+const CPUINFO = (req, res) => {
     // for now just call db but also have some constraints like >3 letters 
     // technically this should be done frontend 
     if (req.body.author == undefined || req.body.author.length <= 3) {
         res.status(400).json({ error: "search query needs to be more than 3 letters" })
     } else {
-        db.authorFilter(req, res)
+        db.CPUINFO(req, res)
     }
 }
 
-const bookFilter = (req, res) => {
+const GPUINFO = (req, res) => {
+    // for now just call db but also have some constraints like >3 letters 
+    // technically this should be done frontend 
+    if (req.body.author == undefined || req.body.author.length <= 3) {
+        res.status(400).json({ error: "search query needs to be more than 3 letters" })
+    } else {
+        db.GPUINFO(req, res)
+    }
+}
+
+const Prices = (req, res) => {
     // for now just call db but also have some constraints like >3 letters 
     // technically this should be done frontend 
     if (req.body.book == undefined || req.body.book.length <= 3) {
