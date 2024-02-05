@@ -63,7 +63,7 @@ app.get('/', (req, res)=> res.send({"welcome": "it works"}))
 
 // CREATE TRADE // given a json object of an array of books.  
 
-app.post('/CPUINFO/:cpuid', (req, res) => {
+app.get('/search/CPU', (req, res) => {
     const cpuid = req.params.cpuid;
     db.CPUINFO(cpuid, (error, result) => {
         if (error) {
@@ -74,7 +74,7 @@ app.post('/CPUINFO/:cpuid', (req, res) => {
     });
 });
 
-app.post('/GPUINFO/:gpuid', (req, res) => {
+app.post('/search/GPU', (req, res) => {
     const gpuid = req.params.gpuid;
     db.GPUINFO(gpuid, (error, result) => {
         if (error) {
@@ -85,7 +85,7 @@ app.post('/GPUINFO/:gpuid', (req, res) => {
     });
 });
 
-app.get('/Prices', (req, res) => {
+app.get('/search/Prices', (req, res) => {
     db.Prices((error, result) => {
         if (error) {
             res.status(404).send({ error: 'Price cannot be found' });

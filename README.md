@@ -16,8 +16,7 @@ Search GPU
 localhost:3999/search/GPU (GET endpoint) -- pass in "author" : "authorName" as a JSON body
 
 Search Price
-localhost:3999/search/CPU/Prices (GET endpoint) -- pass in "author" : "authorName" as a JSON body
+localhost:3999/search/Prices (GET endpoint) -- pass in "author" : "authorName" as a JSON body
 
-localhost:3999/search/GPU/Prices (GET endpoint) -- pass in "author" : "authorName" as a JSON body
 
 OTHER ENDPOINTS (not made) -- For all these customer-specific endpoints, plan is to have user automatically passed as authentication later
